@@ -27,7 +27,7 @@ The list of Spools to load into the framework. Spools to include can be found on
 
 As discussed in the [Fabrix Design Theory](../ref/theory.md) section:
 
-> The fabrix framework has exactly one feature: the ability to harmoniously manage Spools.
+> The Fabrix framework has exactly one feature: the ability to harmoniously manage Spools.
 > The capability available to the developer is thus an emergent property of the Spools the user has installed. 
 
 Read more about Spools:

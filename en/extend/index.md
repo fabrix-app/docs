@@ -4,7 +4,7 @@
 
 ## 7.1 [Services](service.md)
 
-In addition to being a great tool for organizing application logic, Services are re-usable across fabrix applications.
+In addition to being a great tool for organizing application logic, Services are re-usable across Fabrix applications.
 
 ## 7.2 [Spools](spool.md)
 

@@ -1,7 +1,7 @@
 # Getting Started
-###### fabrix - UserGuides
+###### Fabrix - UserGuides
 
-You will learn some basic information about fabrix, how to create a fabrix project, and the basic structure of a fabrix project.
+You will learn some basic information about fabrix, how to create a Fabrix project, and the basic structure of a Fabrix project.
 
 This guide assumes that you have previously installed Node.js 4.0.0 (or higher) on your machine. Some knowledge of MVC and Javascript is needed.
 
@@ -62,7 +62,7 @@ Your server should now be running on port 3000, and you should see on your conso
 
 And if your open http://localhost:3000 you should see :
 
-![.Hello fabrix !](/assets/img/tutoYofabrix4.png)
+![.Hello Fabrix !](/assets/img/tutoYofabrix4.png)
 
 To stop server you need to `Ctrl+c` twice.
 
@@ -111,7 +111,7 @@ As you can see, the MVC design pattern in Fabrix is slightly different; it adds 
 Let's see how the default file structure looks.
 
 #### Models
-Model files depends on your ORM. By default fabrix uses Waterline, so model definition will look like (http://waterline.js.org/docs/models/models.html) :
+Model files depends on your ORM. By default Fabrix uses Waterline, so model definition will look like (http://waterline.js.org/docs/models/models.html) :
 
 ```js
 const Model = require('fabrix-model')
@@ -143,7 +143,7 @@ import { FabrixController as Controller } from '@fabrix/fabrix/dist/common'
 /**
  * @module ViewController
  *
- * @description Default Controller included with a new fabrix app
+ * @description Default Controller included with a new Fabrix app
  * @see {@link http://fabrix.app/doc/api/controllers}
  * @this fabrixApp
  */
@@ -152,13 +152,13 @@ export class ViewController extends Controller {
    *
    */
   helloWorld (request, reply) {
-    reply('Hello fabrix !')
+    reply('Hello Fabrix !')
   }
 }
 ```
 Here is what you should see when you open your browser on http://localhost:3000. But how is this function mapped to route `/` ? You will see this in Config section.
 
-If your controller(s) extends 'fabrix-controller' then your controller(s) methods must have to implement only hapi interface (with `request` and `reply`) and your controllers will work with hapi, express4 or any webserver spool who support standard fabrix controllers.
+If your controller(s) extends 'fabrix-controller' then your controller(s) methods must have to implement only hapi interface (with `request` and `reply`) and your controllers will work with hapi, express4 or any webserver spool who support standard Fabrix controllers.
 If your controllers doesn't extends this class like the example above, your controller methods can implement native interface of the choosen webserver (`request`, `reply` for hapi, `req`, `res`, `next` for express4...).
 
 You can create new controllers with this command :
@@ -175,7 +175,7 @@ import * as _ from 'lodash'
 /**
  * @module DefaultService
  *
- * @description Default Service included with a new fabrix app
+ * @description Default Service included with a new Fabrix app
  * @see {@link http://fabrix.app/doc/api/services}
  * @this fabrixApp
  */
@@ -247,11 +247,11 @@ The `config` folder contains all the config file for each part of the server. Yo
 - web : Options for web server, like port.
 - webpack : Configuration for building assets, it's a default webpack configuration (http://webpack.github.io/docs/configuration.html)
 
-NOTE: `spools*`: All modules used by fabrix are call Spool. For example to use Hapi as web server, fabrix uses a Spool named `spool-hapi`. Don't hesitate to look on npm to find some cool Spools.
+NOTE: `spools*`: All modules used by Fabrix are call Spool. For example to use Hapi as web server, Fabrix uses a Spool named `spool-hapi`. Don't hesitate to look on npm to find some cool Spools.
 
 WARNING: if you add some config files don't forget to add them under `config/index.js` or it will be ignored.
 
-You now have the basic knowledge to make a simple fabrix project!
+You now have the basic knowledge to make a simple Fabrix project!
 
 ## More?
 Did you notice that when you start your project you have `fabrix>`?

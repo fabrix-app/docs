@@ -17,18 +17,18 @@ export const routes = {
   }
 }
 ```
+## path (Object Key)
+
+The route Object Key (or path) will handle requests to URLs that match.
+
 
 ## `handler`
 
-A string that defines the [fabrix Controller](../build/controller.md) method that will handle the request.
+A string that defines the [Fabrix Controller](../build/controller.md) method that will handle the request.
 
 ## `method`
 
 The Route `method` can be the string of a single http method (e.g. `POST`) or an array of the http methods that will be accepted for this route.
-
-## `path`
-
-The route will handle requests to URLs that match `path`.
 
 ### Path Parameters
 
@@ -90,7 +90,7 @@ export const routes = {
 
 ### Access Control
 
-Pre-requisites can be defined for a route, which are a list of [fabrix Policies](../build/policy.md) that must pass before the route handler is invoked.
+Pre-requisites can be defined for a route, which are a list of [Fabrix Policies](../build/policy.md) that must pass before the route handler is invoked.
 
 ```js
 export const routes = {
@@ -103,7 +103,7 @@ export const routes = {
          * Ensure that the client has a valid API key for this Map tile request
          */
           pre: [
-          'MapPolicy.verifyApiKey'
+            'MapPolicy.verifyApiKey'
           ],
     
          /**

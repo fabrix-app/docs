@@ -2,7 +2,7 @@
 
 # 3. Configuration
 
-fabrix provides a unified way to configure all facets of your application. All configuration files are located in the `config/` directory.
+Fabrix provides a unified way to configure all facets of your application. All configuration files are located in the `config/` directory.
 
 ## 3.1. [`index.js`](manifest.md)
 
@@ -14,7 +14,7 @@ Declare the Spools to load, set filesystem paths, and other basic application se
 
 ## 3.3. [`log.js`](log.md)
 
-Setup the logger that fabrix will use during runtime.
+Setup the logger that Fabrix will use during runtime.
 
 ## 3.4. [`routes.js`](routes.md)
 
@@ -34,7 +34,7 @@ Configure the web server. Set the listening port, load any plugins, and define a
 
 # Environment
 
-fabrix can load environment-dependent configuration based on the `NODE_ENV` environment variable. By default, `NODE_ENV=development`. By creating separate configurations inside `config/env/`, different configurations are loaded based on the value of `NODE_ENV`. Note: Anytime you add a config file, remember to add it to the [`index.js`](index.md) manifest!
+Fabrix can load environment-dependent configuration based on the `NODE_ENV` environment variable. By default, `NODE_ENV=development`. By creating separate configurations inside `config/env/`, different configurations are loaded based on the value of `NODE_ENV`. Note: Anytime you add a config file, remember to add it to the [`index.js`](index.md) manifest!
 
 ## Example
 

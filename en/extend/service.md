@@ -96,7 +96,7 @@ entry point: (index.js) api/services/TranslatorService.js
 test command: eslint . && mocha
 git repository:
 keywords:
-author: fabrix Team <hello@fabrix.app>
+author: Fabrix Team <hello@fabrix.app>
 license: (ISC) MIT
 About to write to /home/fabrix-app/translator-service/package.json:
 

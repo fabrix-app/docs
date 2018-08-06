@@ -2,7 +2,7 @@
 
 # 9. API Reference
 
-This section elucidates the inner workings of the fabrix framework, and provides a reference for the module APIs.
+This section elucidates the inner workings of the Fabrix framework, and provides a reference for the module APIs.
 
 # Classes
 
@@ -12,11 +12,11 @@ This is the primary API that your application resources, such as Controllers and
 
 ## 9.2. [Spool](spool.md)
 
-This interface is implemented by all Spools, and is relied upon by the fabrix Application to harmoniously load and manage them.
+This interface is implemented by all Spools, and is relied upon by the Fabrix Application to harmoniously load and manage them.
 
 ## 9.3. [Controller](controller.md)
 
-fabrix Controllers contain request handler methods. Controller methods receive requests from the client, and send responses to them.
+Fabrix Controllers contain request handler methods. Controller methods receive requests from the client, and send responses to them.
 
 ## 9.4. [Policy](policy.md)
 
@@ -24,7 +24,7 @@ A Policy is a special kind of handler that decides whether to forward requests t
 
 ## 9.5. [Service](service.md)
 
-fabrix Services contain most of the application's business logic. Service methods are invoked by Controller handlers to process requests.
+Fabrix Services contain most of the application's business logic. Service methods are invoked by Controller handlers to process requests.
 
 ## 9.6. [Model](model.md)
 

@@ -6,7 +6,7 @@
 
 ## `class` Service
 
-fabrix Services contain most of the application's business logic. Service methods are invoked by Controller handlers to process requests.
+Fabrix Services contain most of the application's business logic. Service methods are invoked by Controller handlers to process requests.
 Service classes are singletons; that is, each subclassed Service is instantiated once, and that reference is maintained during the life of the program.
 
 ### `constructor (app)`
@@ -15,7 +15,7 @@ Initialize the Service with the provided `app` instance.
 
 | @param | type | description | required? |
 |:---|:---|:---|:---|
-| `app` | `fabrix` | the fabrix application instance | yes |
+| `app` | `fabrix` | the Fabrix application instance | yes |
 
 ## Methods
 

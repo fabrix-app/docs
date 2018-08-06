@@ -2,7 +2,7 @@
 
 # 3.7. `web.js`
 
-Configure the web server. Set the listening port, load any plugins, and define advanced web server settings. fabrix supports several web servers, so the particular configuration options available will be provided by the chosen web server Spool (e.g., express, hapi).
+Configure the web server. Set the listening port, load any plugins, and define advanced web server settings. Fabrix supports several web servers, so the particular configuration options available will be provided by the chosen web server Spool (e.g., express, hapi).
 
 ```js
 // config/web.js
@@ -53,7 +53,7 @@ export const web = {
    * any necessary initialization. Here, we're setting up Hapi for server-side
    * rendering of a React.js application.
    *
-   * @this refers to the fabrix application object
+   * @this refers to the Fabrix application object
    */
   onPluginsLoaded (err) {
     this.packs.hapi.server.views({

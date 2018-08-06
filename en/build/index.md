@@ -1,6 +1,6 @@
 #### [Docs](../../) / Build
 
-##### *If you haven't yet created a fabrix Application, [**Start**](../start.md) there first.*
+##### *If you haven't yet created a Fabrix Application, [**Start**](../start.md) there first.*
 
 # 2. Build
 

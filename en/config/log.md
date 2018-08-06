@@ -2,11 +2,11 @@
 
 # 3.3. `log.js`
 
-Setup the logger that fabrix will use during runtime.
+Setup the logger that Fabrix will use during runtime.
 
 ## `logger`
 
-In order to boot, fabrix requires that the value `config.log.logger` is set with an object that contains at least the following methods:
+In order to boot, Fabrix requires that the value `config.log.logger` is set with an object that contains at least the following methods:
 
 - debug
 - info

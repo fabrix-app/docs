@@ -2,7 +2,7 @@
 
 # [Start](#start) 
 
-Fabrix is a framework, and is downloadable as a module from [**npm**](https://www.npmjs.com/package/@fabrix/fabrix). This guide will walk through how to set up a new fabrix application using the fabrix installer.
+Fabrix is a framework, and is downloadable as a module from [**npm**](https://www.npmjs.com/package/@fabrix/fabrix). This guide will walk through how to set up a new Fabrix application using the Fabrix installer.
 
 If you haven't yet installed Node, download it from [**nodejs.org**](https://nodejs.org/en/) and follow the instructions there.
 
@@ -34,7 +34,7 @@ Default: `hapi`.
 Fabrix supports many of the popular Node.js web server modules. If this is your first Fabrix application, we recommend starting with either Hapi or Express.
 
 ```
-Get ready to blaze a new fabrix Application!
+Get ready to blaze a new Fabrix Application!
 
 Checking for updates...
 ? Choose a Web Server (Use arrow keys)
@@ -47,7 +47,7 @@ Checking for updates...
 
 Default: `waterline`
 
-An ORM (object-relational mapping) can be included with your new fabrix application. Like all plugins, they can easily be added later.
+An ORM (object-relational mapping) can be included with your new Fabrix application. Like all plugins, they can easily be added later.
 
 ```
 ? Choose an ORM (Use arrow keys)
@@ -77,7 +77,7 @@ Specify the name, description, and other attributes of your new module. These va
 
 ```
 ? Module Name (new-fabrix-app)
-? Description this is a new fabrix app
+? Description this is a new Fabrix app
 ? Project homepage url fabrix.app
 ? Author's Name fabrix-app
 ? Author's Email hello@fabrix.app
@@ -102,7 +102,7 @@ Default: `MIT`
 
 ### 6. Done!
 
-A bunch of new files will be created, and you'll be able to fire up your new fabrix application and start building features.
+A bunch of new files will be created, and you'll be able to fire up your new Fabrix application and start building features.
 
 ```
 ┌───────────────────────────────────────────┐

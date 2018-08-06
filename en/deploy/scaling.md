@@ -4,7 +4,7 @@
 
 If you have your api packaged in a docker container, you can use an orchestration platform to scale the application.
 
-This example assumes you setup docker in the manner specified in the fabrix [Docker tutorial](docker.md).
+This example assumes you setup docker in the manner specified in the Fabrix [Docker tutorial](docker.md).
 
 ### [Docker Swarm](https://docs.docker.com/engine/swarm/)
 

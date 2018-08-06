@@ -8,7 +8,7 @@ This guide will walk through how to define our schema using Models. The followin
 
 ## Choose a Datastore
 
-In fabrix, Models are kept in **stores**. A store can be a database, a file on disk, or even an external web service. fabrix does not include any native ORM functionality in its core; instead, the developer can install a Spool that enables the fuctionality for whichever kind of **store** they plan to use.
+In fabrix, Models are kept in **stores**. A store can be a database, a file on disk, or even an external web service. Fabrix does not include any native ORM functionality in its core; instead, the developer can install a Spool that enables the fuctionality for whichever kind of **store** they plan to use.
 
 ### Datastore Spools
 

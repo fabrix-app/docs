@@ -6,7 +6,7 @@
 
 ## `class` Policy
 
-A Policy is a special kind of handler that decides whether to forward requests to the Controllers. fabrix Policy classes are singletons; that is, each subclassed Policy is instantiated once, and that reference is maintained during the life of the program.
+A Policy is a special kind of handler that decides whether to forward requests to the Controllers. Fabrix Policy classes are singletons; that is, each subclassed Policy is instantiated once, and that reference is maintained during the life of the program.
 
 ### `constructor (app)`
 
@@ -14,7 +14,7 @@ Initialize the Policy with the provided `app` instance.
 
 | @param | type | description | required? |
 |:---|:---|:---|:---|
-| `app` | `fabrix` | the fabrix application instance | yes |
+| `app` | `fabrix` | the Fabrix application instance | yes |
 
 ## Methods
 

@@ -5,23 +5,20 @@ configuring development and production environments. You can learn more about Do
 
 This example assumes you are using a the following database configuration
 
-_config/database.js_
+_config/stores.ts_
 ```js
-module.exports = {
-  stores: {
-    mongo: {
-      adapter: require('sails-mongo'),
-      host: process.env.MONGO_HOST ? process.env.MONGO_HOST : 'localhost',
-      port: process.env.MONGO_PORT ? process.env.MONGO_PORT : 27017,
-      database: process.env.MONGO_DATABASE ? process.env.MONGO_DATABASE : 'fabrix'
-    }
-  },
-
-  models: {
-    defaultStore: 'mongo',
-    migrate: 'safe'
+export const stores = {
+  mongo: {
+    adapter: require('sails-mongo'),
+    host: process.env.MONGO_HOST ? process.env.MONGO_HOST : 'localhost',
+    port: process.env.MONGO_PORT ? process.env.MONGO_PORT : 27017,
+    database: process.env.MONGO_DATABASE ? process.env.MONGO_DATABASE : 'fabrix'
   }
-};
+}
+export const models = {
+  defaultStore: 'mongo',
+  migrate: 'safe'
+}
 ```
 
 ### 1. Create a docker file in the root of your project

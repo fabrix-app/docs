@@ -8,7 +8,7 @@ Policies decide whether a request should invoke the defined Controller at all. T
 
 As a simple example, let's say your web service should only be available during business hours, 8am - 5pm. We'll write a Policy that validates this condition, and only forwards the request to our Controller only if the request is made during business hours. We'll use [momentjs](https://momentjs.com) to help us with the time validation. Go ahead and `npm install moment`.
 
-Similar to Controllers and Services, we'll create a new Policy using the fabrix generator:
+Similar to Controllers and Services, we'll create a new Policy using the Fabrix generator:
 
 ### Create Policy
 

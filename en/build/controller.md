@@ -10,7 +10,7 @@ First, we'll walk through setting up a typical REST-compatible web service that 
 
 ## Create a Controller
 
-fabrix includes generators for common templates, such as Controllers. To create a Controller named `FirstController`, open up your console and type the following command:
+Fabrix includes generators for common templates, such as Controllers. To create a Controller named `FirstController`, open up your console and type the following command:
 
 #### `fab controller FirstController`
 
@@ -141,15 +141,15 @@ The Controller method to route the request to. In the Route configuration above,
 
 ### Try it out!
 
-Now that you've finished implementing and configuring your first Controller, let's try it out! New fabrix applications includes a [REPL](https://github.com/fabrix-app/spool-repl) that let you interact with the application while it's running. After you run `npm start`, you should see something like this:
+Now that you've finished implementing and configuring your first Controller, let's try it out! New Fabrix applications includes a [REPL](https://github.com/fabrix-app/spool-repl) that let you interact with the application while it's running. After you run `npm start`, you should see something like this:
 
-![fabrix REPL](fabrix-helloworld-repl.png)
+![Fabrix REPL](fabrix-helloworld-repl.png)
 
-Now, you can test out your new Controller right in the fabrix console:
+Now, you can test out your new Controller right in the Fabrix console:
 
 ```
-fabrix > get('/first/sayHello')
-fabrix > info: 200
+Fabrix > get('/first/sayHello')
+Fabrix > info: 200
 { message: 'hello world!' }
 ```
 

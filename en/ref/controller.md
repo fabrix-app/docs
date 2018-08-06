@@ -6,7 +6,7 @@
 
 ## `class` Controller
 
-fabrix Controller classes are singletons; that is, each subclassed Controller is instantiated once, and that reference is maintained during the life of the program.
+Fabrix Controller classes are singletons; that is, each subclassed Controller is instantiated once, and that reference is maintained during the life of the program.
 
 ### `constructor (app)`
 
@@ -14,7 +14,7 @@ Initialize the Controller with the provided `app` instance.
 
 | @param | type | description | required? |
 |:---|:---|:---|:---|
-| `app` | `fabrix` | the fabrix application instance | yes |
+| `app` | `fabrix` | the Fabrix application instance | yes |
 
 ## Methods
 

@@ -8,7 +8,7 @@ Maintaining a open source project is a labor of love, meaning the core maintaine
 
 ## Submitting Issues
 
-> fabrix is composed of a core library, [fabrix](https://github.com/fabrix-app/fabrix), and a number of [Spools](https://github.com/fabrix-app), which have their own dedicated repositories.  These repositories may also live outside the fabrix official Github organization.  
+> Fabrix is composed of a core library, [fabrix](https://github.com/fabrix-app/fabrix), and a number of [Spools](https://github.com/fabrix-app), which have their own dedicated repositories.  These repositories may also live outside the Fabrix official Github organization.  
 > 
 > _*Please open issues with spools, generators, etc. in the relevant repository.*_  
 > 
@@ -30,7 +30,7 @@ When submitting an issue, please follow these simple instructions:
 
 ## Submitting Features
 
-> New feature requests should be made as pull requests to the `backlog` section of [ROADMAP.MD](https://github.com/fabrix-app/fabrix/blob/master/ROADMAP.md) or as issues on the `Backlog` milestone in the [issue queue](https://github.com/fabrix-app/fabrix/milestones/Backlog).  We will monitor community discussion on these PRs and issues and if they are wanted by the community/fabrix devs, they will be merged.  Further discussion is welcome even after a PR has been merged. 
+> New feature requests should be made as pull requests to the `backlog` section of [ROADMAP.MD](https://github.com/fabrix-app/fabrix/blob/master/ROADMAP.md) or as issues on the `Backlog` milestone in the [issue queue](https://github.com/fabrix-app/fabrix/milestones/Backlog).  We will monitor community discussion on these PRs and issues and if they are wanted by the community/Fabrix devs, they will be merged.  Further discussion is welcome even after a PR has been merged. 
 
 ##### Submitting a new feature request
 1. First, look at the `backlog` table in [ROADMAP.MD](https://github.com/fabrix-app/fabrix/blob/master/ROADMAP.md) or the [Backlog Milestone](https://github.com/fabrix-app/fabrix/milestones/Backlog) in the issue queue toand also search open pull requests in that file to make sure your change hasn't already been proposed.  If it has, join the discussion.
@@ -56,7 +56,7 @@ The community is what makes Fabrix great, without you we wouldn't have come so f
 
 ###### No CoffeeScript.
 
-For consistency, all code in fabrix core, including core hooks and core generators, must be written in JavaScript, not CoffeeScript or TypeScript.  We can't merge a pull request in CoffeeScript.
+For consistency, all code in Fabrix core, including core hooks and core generators, must be written in JavaScript, not CoffeeScript or TypeScript.  We can't merge a pull request in CoffeeScript.
 
 ###### Contributing to an Spool 
 
@@ -66,7 +66,7 @@ If the Spool is in the Fabrix Github organization, please send feature requests,
 
 You are welcome to author a new Spool at any time.  Spools must inherit from the main [Spool](https://github.com/fabrix-app/spool) interface to inherit the API.  Feel free to start work on a new spool, just make sure and do a thorough search on npm, Google and Github to make sure someone else hasn't already started working on the same thing.  
 
-It is recommended that you maintain your Spool in your own Github repository.  If you would like to submit your Spool to be listed in the [fabrix Github Organization](https://github.com/fabrix-app), please submit an issue to the [fabrix Issue queue](https://github.com/fabrix-app/spool/issues).
+It is recommended that you maintain your Spool in your own Github repository.  If you would like to submit your Spool to be listed in the [Fabrix Github Organization](https://github.com/fabrix-app), please submit an issue to the [Fabrix Issue queue](https://github.com/fabrix-app/spool/issues).
 
 ###### Contributing to a generator
 
@@ -89,7 +89,7 @@ In case of doubt, open an issue in the [issue tracker](https://github.com/fabrix
 
 ## Publishing Releases
 
-All releases are tagged and published by the [fabrix Maintainers](https://github.com/orgs/fabrix-app/teams) automatically via [Circle-CI](https://https://circleci.com/gh/fabrix-app). For a patch release, the deployment process is as follows:
+All releases are tagged and published by the [Fabrix Maintainers](https://github.com/orgs/fabrix-app/teams) automatically via [Circle-CI](https://https://circleci.com/gh/fabrix-app). For a patch release, the deployment process is as follows:
 
 1. Tag a release
 ```sh

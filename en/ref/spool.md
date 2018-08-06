@@ -4,35 +4,35 @@
 
 ## `class` Spool
 
-This interface is implemented by all Spools, and is relied upon by the fabrix Application to harmoniously load and manage them.
+This interface is implemented by all Spools, and is relied upon by the Fabrix Application to harmoniously load and manage them.
 
-### `constructor (app, pack)`
+### `constructor (app, spool)`
 
-Initialize the application with the provided fabrix `app` instance.
+Initialize the application with the provided Fabrix `app` instance.
 
 | @param | type | description | required? |
 |:---|:---|:---|:---|
-| `app` | `fabrix` | the fabrix application instance | yes |
-| `pack` | `Object` | the Spool definition | yes |
-| `pack.pkg` | `Object` | the `package.json` of the Spool | yes. throws `PackageNotDefinedError` |
-| `pack.config` | `Object` | any custom configuration that the Spool requires | no |
-| `pack.api` | `Object` | any additonal API resources to mix-in to the fabrix `app` | no |
+| `app` | `fabrix` | the Fabrix application instance | yes |
+| `spool` | `Object` | the Spool definition | yes |
+| `spool.pkg` | `Object` | the `package.json` of the Spool | yes. throws `PackageNotDefinedError` |
+| `spool.config` | `Object` | any custom configuration that the Spool requires | no |
+| `spool.api` | `Object` | any additonal API resources to mix-in to the Fabrix `app` | no |
 
 #### How to Subclass
 
-Each Spool subclass will provide the `pack` definition to this superclass. For example:
+Each Spool subclass will provide the `spool` definition to this superclass. For example:
 
 ```js
 export class BootstrapSpool extends Spool {
 
   /**
-   * fabrix passes in "app" as a reference to itself
+   * Fabrix passes in "app" as a reference to itself
    * @override
    */
   constructor (app) {
 
     // This constructor passes along the "app" reference, and provides its own custom
-    // "pack" definition to the Spool superclass constructor.
+    // "spool" definition to the Spool superclass constructor.
     super(app, {
       pkg: require('./package'),
       config: require('./config'),
@@ -44,11 +44,11 @@ export class BootstrapSpool extends Spool {
 
 #### Instantiation
 
-Spools are never instantiated directly by the developer. Each Spool is instantiated in the [`fabrix`](../fabrix.md) constructor like so:
+Spools are never instantiated directly by the developer. Each Spool is instantiated in the [`Fabrix`](../fabrix.md) constructor like so:
 ```js
-this.config.get('main.packs').forEach(Pack => new Pack(this))
+this.config.get('main.spools').forEach(Pack => new Pack(this))
 ```
-where `this` references the `fabrix` instance. Note that `pack` argument is required here because the Spool subclass will provide this to its superclass (this class).
+where `this` references the `fabrix` instance. Note that `spool` argument is required here because the Spool subclass will provide this to its superclass (this class).
 
 ## Methods
 
@@ -56,6 +56,7 @@ The following methods correspond to each of the four [Spool Lifecycle](./build/s
 - validate
 - configure
 - initialize
+- sanity
 - unload
 
 Note: Do not invoke these methods directly in your application code.
@@ -86,7 +87,7 @@ Set any configuration required before the spools are initialized. Spools that re
 export class BootstrapSpool extends Spool {
 
   /**
-   * Bind the fabrix app to the bootstrap function's context so that it can fire events.
+   * Bind the Fabrix app to the bootstrap function's context so that it can fire events.
    */
   configure () {
     this.config.bootstrap = this.config.bootstrap.bind(this.app)
@@ -111,8 +112,26 @@ export class BootstrapSpool extends Spool {
 }
 ```
 
+## `sanity ()`
+This stage runs after the boot process when the configuration of the app is technically immutable. This stage is intended to check that the Fabrix app configuration is suitable for the Spool to run in a space where there may have been name space conflicts.
+
+```js
+export class BootstrapSpool extends Spool {
+
+  /**
+   * Check that a config variable is indeed what the Bootstrap spool requires after the other lifecycle stages.
+   */
+  async sanity () {
+    if (!this.config.get('name') === 'sanity') {
+      Promise.reject(new SanityError('name does not equal sanity'))
+    }
+  }
+}
+```
+
+
 ## `unload ()`
 
-This method is invoked when fabrix is shutting down, either due to an unrecoverable runtime error, or because the user has explicitly invoked `.stop()`. This method should instruct the spool to perform any necessary cleanup with the expectation that the app will stop or reload soon thereafter. If your spool runs a daemon or any other thing that may occupy the event loop, implementing this method is important for fabrix to exit correctly.
+This method is invoked when Fabrix is shutting down, either due to an unrecoverable runtime error, or because the user has explicitly invoked `.stop()`. This method should instruct the spool to perform any necessary cleanup with the expectation that the app will stop or reload soon thereafter. If your spool runs a daemon or any other thing that may occupy the event loop, implementing this method is important for Fabrix to exit correctly.
 
 ## Next: [Controller API](controller.md)

@@ -1,8 +1,8 @@
 #### [Docs](../../) / [API Reference](./) / fabrix
 
-# 9.1 fabrix API
+# 9.1 Fabrix API
 
-## `class` fabrix `extends` [EventEmitter](https://nodejs.org/api/events.html#events_class_eventemitter)
+## `class` Fabrix `extends` [EventEmitter](https://nodejs.org/api/events.html#events_class_eventemitter)
 
 This class instantiates, starts, and stops the application and all Spools.
 
@@ -20,19 +20,19 @@ Initialize the application with the provided `app` definition. All configured Sp
 |:---|:---|
 | `spool:<pack>:constructed` | after each Spool is successfully instantiated |
 
-In a [New fabrix Application](../start.md), fabrix is instantiated in `server.js` like so:
+In a [New Fabrix Application](../start.md), Fabrix is instantiated in `server.js` like so:
 
 ```js
 import { FabrixApp } from '@fabrix/fabrix'
 const app = require('./')
-const fabrix = new FabrixApp(app)
+const Fabrix = new FabrixApp(app)
 
 fabrix.start().catch(err => fabrix.stop(err))
 ```
 
 | @return type | description |
 |:---|:---|
-| `fabrix` | the fabrix Application |
+| `fabrix` | the Fabrix Application |
 
 
 ## Methods
@@ -45,16 +45,18 @@ Binds event listeners and initiates the Spool Boot Process.
 |:---|:---|
 | `fabrix:start` | emitted before the start of the Spool boot process |
 | `fabrix:ready` | emitted once all Spools have successfully initialized |
-| `spool:<pack>:validated` | emitted after each Spool completes the `validate` stage |
-| `spool:<pack>:configured` | emitted after each Spool completes the `configure` stage |
-| `spool:<pack>:initialized` | emitted after each Spool completes the `initialized` stage |
+| `spool:<spool>:validated` | emitted after each Spool completes the `validate` stage |
+| `spool:<spool>:configured` | emitted after each Spool completes the `configure` stage |
+| `spool:<spool>:initialized` | emitted after each Spool completes the `initialized` stage |
+| `spool:<spool>:sane` | emitted after each Spool completes the `sanity` stage |
 | `spool:all:validated` | emitted after all Spools have completed the `validated` stage |
 | `spool:all:configured` | emitted after all Spools have completed the `configure` stage |
 | `spool:all:initialized` | emitted after all Spools have completed the `initialize` stage |
+| `spool:all:sane` | emitted after all Spools have completed the `sanity` stage |
 
 | @return type | description |
 |:---|:---|
-| `Promise (fabrix)` | the fabrix Application |
+| `Promise (fabrix)` | the Fabrix Application |
 
 ### `stop (err)`
 
@@ -72,7 +74,7 @@ Unbind all event listeners and unload all Spools.
 
 | @return type | description |
 |:---|:---|
-| `Promise (fabrix)` | the fabrix Application |
+| `Promise (fabrix)` | the Fabrix Application |
 
 ### `emit (eventName [, ...args])`
 
@@ -89,7 +91,7 @@ Emits the event, and logs the event at the `debug` level.
 
 | @return type | description |
 |:---|:---|
-| `fabrix` | the fabrix Application |
+| `fabrix` | the Fabrix Application |
 
 ### `onceAny (eventNames [, handler])`
 
@@ -148,14 +150,12 @@ Translate a message according to the application's [i18n Configuration](../confi
 
 ```js
 this.app.__('hello.world')
-this.app.t('hello.world')
 ```
 
 Inside resource classes (e.g. Controller, Service, Policy) and Spools, the following shorthand is available:
 
 ```js
 this.__('hello.world')
-this.t('hello.world')
 ```
 
 ## Fields
