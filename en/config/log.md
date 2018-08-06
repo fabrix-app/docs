@@ -16,8 +16,8 @@ In order to boot, fabrix requires that the value `config.log.logger` is set with
 An example using the [*winston*](https://github.com/winstonjs/winston) logger:
 
 ```js
-// config/log.js
-module.exports = {
+// config/log.ts
+export const log = {
   logger: new winston.Logger({
     level: 'debug',
     exitOnError: false,
@@ -40,8 +40,8 @@ When deploying to production, you will likely want to configure the logger to le
 In this example, Winston is configured to log to the console, as well as a permanent logfile.
 
 ```js
-// config/env/production.js
-module.exports = {
+// config/env/production.ts
+export const production = {
   log: {
     logger: new winston.Logger({
       level: 'info',

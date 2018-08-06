@@ -7,7 +7,7 @@ Configure the web server. Set the listening port, load any plugins, and define a
 ```js
 // config/web.js
 
-module.exports = {
+export const web = {
   /**
    * The port to bind the web server to
    */
@@ -29,7 +29,7 @@ The [Hapi Spool](https://github.com/fabrix-app/spool-hapi) provides the ability 
 ```js
 // config/web.js
 
-module.exports = {
+export const web = {
   // ...
 
   /**
@@ -79,7 +79,7 @@ The [Express Spool](https://github.com/fabrix-app/spool-express) provides the ab
 ```js
 // config/web.js
 
-module.exports = {
+export const web = {
 
   /**
    * CORS options

@@ -23,9 +23,9 @@ Initialize the application with the provided `app` definition. All configured Sp
 In a [New fabrix Application](../start.md), fabrix is instantiated in `server.js` like so:
 
 ```js
-const fabrix = require('fabrix')
+import { FabrixApp } from '@fabrix/fabrix'
 const app = require('./')
-const fabrix = new fabrix(app)
+const fabrix = new FabrixApp(app)
 
 fabrix.start().catch(err => fabrix.stop(err))
 ```

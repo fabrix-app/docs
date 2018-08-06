@@ -18,13 +18,15 @@ Then, include it into the Services manifest:
 
 ```js
 // api/services/index.js
-
-exports.TranslationService = require('@myorg/api/services/TranslationService')
+import { Service } from '@myorg/api/services/TranslationService'
+export class TranslationService extends Service {
+  
+}
 ```
 
 ## Peel off an Existing Service into a Separate Module
 
-Your fabrix application will have many Services that serve as helpers to the Controller handlers, and to execute business logic.
+Your Fabrix application will have many Services that serve as helpers to the Controller handlers, and to execute business logic.
 Often, you'll want to share one or more Service with another application. Let's walk through this process with an example.
 
 ### Existing Application Service
@@ -38,7 +40,7 @@ const LanguageTranslatorV2 = require('watson-developer-cloud/language-translator
 /**
  * Services to assist in translating text into English using IBM Watson
  */
-module.exports = class TranslationService extends Service {
+export class TranslationService extends Service {
 
   /**
    * Determine the source language of a given input string, then translate

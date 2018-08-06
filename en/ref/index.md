@@ -6,7 +6,7 @@ This section elucidates the inner workings of the fabrix framework, and provides
 
 # Classes
 
-## 9.1. [fabrix](fabrix.md)
+## 9.1. [Fabrix](fabrix.md)
 
 This is the primary API that your application resources, such as Controllers and Services, will use to communicate with other areas of your application.
 

@@ -204,13 +204,13 @@ And update the route config to match a `prefix` path parameter:
 
 ```js
 // config/routes.ts
-export const routes = [
-  {
-    method: [ 'GET' ],
-    path: '/first/sayHello/{prefix}',
-    handler: 'FirstController.sayHello'
+export const routes = {
+  '/first/sayHello/{prefix}': {
+    'GET': {
+      handler: 'FirstController.sayHello'
+    }
   }
-]
+}
 ```
 
 Now our request/response looks like this:

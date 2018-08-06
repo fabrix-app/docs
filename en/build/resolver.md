@@ -13,7 +13,7 @@ When creating new Models (via `fab model`), the generator looks at the store con
 ```js
 // api/resolvers/UserResolver.ts
 
-export class UserResolver extends KnexResolver {
+export class UserResolver extends SequelizeResolver {
 
 }
 ```
@@ -62,7 +62,7 @@ Some operations can be disabled by the developer for security or other reasons. 
 ```js
 // api/models/ReadOnlyModel.ts
 
-module.exports = class ReadOnlyModel extends Model {
+export class ReadOnlyModel extends Model {
   update () {
     throw new IllegalAccessError(`${this.getModelName()}.update is not allowed by the server`)
   }

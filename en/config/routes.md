@@ -5,17 +5,17 @@
 Define how web requests are routed to controllers. The Route objects are modeled on the hapi.js [Route Specification](https://hapijs.com/tutorials/routing). Some plugins such as [spool-tapestries](https://github.com/fabrix-app/spool-tapestries) may auto-generate Route configuration based on other facets of the application.
 
 ```js
-module.exports = [
+export const routes = {
 
  /**
   * GET requests to /default/info will invoke DefaultController.info
   */
-  {
-    method: [ 'GET' ],
-    path: '/default/info',
-    handler: 'DefaultController.info'
+  '/default/info': {
+    'GET': {
+      handler: 'DefaultController.info'
+    }
   }
-]
+}
 ```
 
 ## `handler`
@@ -30,24 +30,24 @@ The Route `method` can be the string of a single http method (e.g. `POST`) or an
 
 The route will handle requests to URLs that match `path`.
 
-### Path Paramters
+### Path Parameters
 
 Path parameters can be defined, and will be passed into their handlers. [Full Specification](https://hapijs.com/api#path-parameters).
 
 ```js
-// config/routes.js
-module.exports = [
-  {
-    method: [ 'GET' ],
-    path: '/map/tile/{x}/{y}/{z?}',
-    handler: 'MapController.getTile'
+// config/routes.ts
+export const routes = [
+  '/map/tile/{x}/{y}/{z?}': {
+    'GET': {
+      handler: 'MapController.getTile'
+    }
   }
-]
+}
 ```
 
 ```js
-// api/controllers/MapController.js
-module.exports = class MapController extends Controller {
+// api/controllers/MapController.ts
+export class MapController extends Controller {
 
   /**
    * @param request.params.x  The x coordinate of the map tile
@@ -72,15 +72,19 @@ Some doc generation tools, such as Swagger, can use the `config` object to glean
 
 
 ```js
-{
-  method: [ 'GET' ],
-  path: '/map/tile/{x}/{y}/{z?}',
-  handler: 'MapController.getTile',
-  config: {
-    description: 'Render a map Tile',
-    notes: 'The "z" param will default to config.map.defaultZoom if not given',
-    tags: [ 'api', 'map', 'tile' ]
+export const routes = {
+  // ...
+  '/map/tile/{x}/{y}/{z?}': {
+    'GET': {
+      handler: 'MapController.getTile',
+      config: {
+        description: 'Render a map Tile',
+        notes: 'The "z" param will default to config.map.defaultZoom if not given',
+        tags: [ 'api', 'map', 'tile' ]
+      }
+    }
   }
+  // ...
 }
 ```
 
@@ -89,25 +93,25 @@ Some doc generation tools, such as Swagger, can use the `config` object to glean
 Pre-requisites can be defined for a route, which are a list of [fabrix Policies](../build/policy.md) that must pass before the route handler is invoked.
 
 ```js
-{
-  method: [ 'GET' ],
-  path: '/map/tile/{x}/{y}/{z?}',
-  handler: 'MapController.getTile',
-  config: {
+'/map/tile/{x}/{y}/{z?}': {
+  'GET': {
+    handler: 'MapController.getTile',
+    config: {
     /**
      * Ensure that the client has a valid API key for this Map tile request
      */
-    pre: [
+      pre: [
       'MapPolicy.verifyApiKey'
-    ],
+      ],
 
-    /**
-     * Only allow requests from *.fabrix.app domains
-     */
-    cors: {
-      origin: [
-        '*.fabrix.app'
-      ]
+     /**
+      * Only allow requests from *.fabrix.app domains
+      */
+      cors: {
+        origin: [
+          '*.fabrix.app'
+        ]
+      }
     }
   }
 }

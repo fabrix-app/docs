@@ -5,11 +5,11 @@
 A manifest of the available configuration files. Configuration files added/created should be required in this file. This file should not be used to define any configuration values.
 
 ```js
-// config/index.js
+// config/index.ts
 
-exports.main = require('./main')
-exports.log = require('./log')
-exports.routes = require('./routes')
+export { main } from './main'
+export { log } from './log'
+export { routes } from './routes'
 // ... etc
 ```
 
@@ -18,16 +18,16 @@ exports.routes = require('./routes')
 Each environment-specific configuration should contain its own manifest file.
 
 ```js
-// config/env/index.js
+// config/env/index.ts
 
-exports.staging = require('./staging')
+export { staging } from './staging'
 ```
 
 ```js
-// config/env/staging/index.js
+// config/env/staging/index.ts
 
-exports.main = require('./main')
-exports.log = require('./log')
-exports.routes = require('./routes')
+export { main } from './main'
+export { log } from './log'
+export { routes } from './routes'
 // ... etc
 ```

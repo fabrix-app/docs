@@ -7,12 +7,13 @@ Define data stores. Each [Model](../build/model.md) maps itself to a "store". A 
 ```js
 // config/stores.js
 
-module.exports = {
+export const stores = {
 
   /**
    * A store named "localdisk" that uses the Waterline ORM
    */
   roledb: {
+    orm: 'waterline',
     adapter: require('waterline-sqlite3'),
     migrate: 'alter'
   },
@@ -21,6 +22,7 @@ module.exports = {
    * A store named "localpostgres" that uses Knex.js
    */
   userdb: {
+    orm: 'knex',
     client: 'pg',
     connection: {
       host: 'localhost',
@@ -50,9 +52,9 @@ This store defines `client` and `connection` properties, which the Knex Spool wi
 Each Model defines its backing store. To illustrate how multiple stores can be used, we'll store Users in the Postgres database, and we'll store associated Roles in the SQLite3 database.
 
 ```js
-// api/models/User.js
+// api/models/User.ts
 
-module.exports = class User extends Model {
+export class User extends Model {
   static config () {
     return {
       store: 'userdb'
@@ -70,9 +72,9 @@ module.exports = class User extends Model {
 ```
 
 ```js
-// api/models/Role.js
+// api/models/Role.ts
 
-module.exports = class Role extends Model {
+export class Role extends Model {
   static config () {
     return {
       /**
@@ -109,9 +111,9 @@ module.exports = class Role extends Model {
 ## Services
 
 ```js
-// api/services/PermissionService.js
+// api/services/PermissionService.ts
 
-module.exports = class PermissionService extends Service {
+export class PermissionService extends Service {
   /**
    * Return true if the given User has the required role; false otherwise.
    */

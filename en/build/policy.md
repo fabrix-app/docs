@@ -51,18 +51,18 @@ Let's say we want this Policy to apply to `VersionController.getLatest` that we 
 ```js
 // config/routes.ts
 
-export const routes = [
-  {
-    method: [ 'GET' ],
-    path: '/version/{packageName}',
-    handler: 'VersionController.getLatest',
-    config: {
-      pre: [
-        'TimePolicy.isDuringBusinessHours'
-      ]
+export const routes = {
+  '/version/{packageName}': {
+    'GET': {
+      handler: 'VersionController.getLatest',
+      config: {
+        pre: [
+          'TimePolicy.isDuringBusinessHours'
+        ]
+      }
     }
   }
-]
+}
 ```
 
 . . . or
@@ -70,13 +70,13 @@ export const routes = [
 ```js
 // config/policies.ts
 
-export const policies = [
-  {
-    VersionController: {
-      getLatest: ['TimePolicy.isDuringBusinessHours']
+export const policies = {
+  VersionController: {
+    getLatest: {
+      'GET': ['TimePolicy.isDuringBusinessHours']
     }
   }
-]
+}
 ```
 
 Now, requests to `/version/{packageName}` will first be validated by `TimePolicy`.

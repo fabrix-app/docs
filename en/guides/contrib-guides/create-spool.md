@@ -56,7 +56,7 @@ You should see something like this :
 ![Project structure](/assets/img/tutoYoSpool2.png)
 
 ### API
-As with fabrix, you can generate api files with yo  :
+As with Fabrix, you can generate api files with yo  :
 
 ```
 yo spool:api apiName;

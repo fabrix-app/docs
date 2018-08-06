@@ -74,13 +74,13 @@ export class VersionService extends Service {
 
 ```js
 // config/routes.ts
-export const routes = [
-  {
-    method: [ 'GET' ],
-    path: '/version/{packageName}',
-    handler: 'VersionController.getLatest'
+export const routes = {
+  '/version/{packageName}': {
+    'GET': {
+      handler: 'VersionController.getLatest'
+    }
   }
-]
+}
 ```
 
 ### Try it!
