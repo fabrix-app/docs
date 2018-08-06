@@ -36,7 +36,7 @@ Path parameters can be defined, and will be passed into their handlers. [Full Sp
 
 ```js
 // config/routes.ts
-export const routes = [
+export const routes = {
   '/map/tile/{x}/{y}/{z?}': {
     'GET': {
       handler: 'MapController.getTile'
@@ -93,26 +93,30 @@ export const routes = {
 Pre-requisites can be defined for a route, which are a list of [fabrix Policies](../build/policy.md) that must pass before the route handler is invoked.
 
 ```js
-'/map/tile/{x}/{y}/{z?}': {
-  'GET': {
-    handler: 'MapController.getTile',
-    config: {
-    /**
-     * Ensure that the client has a valid API key for this Map tile request
-     */
-      pre: [
-      'MapPolicy.verifyApiKey'
-      ],
-
-     /**
-      * Only allow requests from *.fabrix.app domains
-      */
-      cors: {
-        origin: [
-          '*.fabrix.app'
-        ]
-      }
+export const routes = {
+    // ...
+    '/map/tile/{x}/{y}/{z?}': {
+      'GET': {
+        handler: 'MapController.getTile',
+        config: {
+        /**
+         * Ensure that the client has a valid API key for this Map tile request
+         */
+          pre: [
+          'MapPolicy.verifyApiKey'
+          ],
+    
+         /**
+          * Only allow requests from *.fabrix.app domains
+          */
+          cors: {
+            origin: [
+              '*.fabrix.app'
+            ]
+          }
+        }
+      } 
     }
-  }
+    // ...
 }
 ```
