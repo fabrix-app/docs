@@ -105,13 +105,13 @@ In order for the request to reach the handler, we configure a **Route** to map t
 
 ```js
 // config/routes.ts
-export const routes = [
-  {
-    method: [ 'GET' ],
-    path: '/first/sayHello',
-    handler: 'FirstController.sayHello'
+export const routes = {
+  '/first/sayHello': {
+    'GET': {
+      handler: 'FirstController.sayHello'
+    }
   }
-]
+}
 ```
 
 #### `method`
@@ -123,9 +123,9 @@ This is a list of HTTP methods the server will accept. A good rule of thumb for 
 - `PUT`: Update
 - `DELETE`: Delete
 
-#### `path`
+#### `path` (key)
 
-The client will invoke the `handler` by making a request that matches the URL in the `path` property. A common convention is to structure the path based on the names of the Controller and the handler method. Thus, `/first/sayHello -> FirstController.sayHello`.
+The client will invoke the `handler` by making a request that matches the URL in the `path` which is the key of the route object. A common convention is to structure the path based on the names of the Controller and the handler method. Thus, `/first/sayHello -> FirstController.sayHello`.
 
 #### `handler`
 
