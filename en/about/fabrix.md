@@ -1,4 +1,4 @@
-#### [Docs](../../) / [About fabrix](./) / What is Fabrix?  
+#### [Docs](../) / [About fabrix](./) / What is Fabrix?  
 
 # 10.1. What is Fabrix?
 

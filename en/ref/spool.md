@@ -1,4 +1,4 @@
-#### [Docs](../../) / [API Reference](./) / Spool
+#### [Docs](../) / [API Reference](./) / Spool
 
 # 9.2 Spool API
 

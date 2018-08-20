@@ -1,4 +1,4 @@
-#### [Docs](../../) / [API Reference](./) / fabrix
+#### [Docs](../) / [API Reference](./) / fabrix
 
 # 9.1 Fabrix API
 

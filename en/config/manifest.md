@@ -1,6 +1,6 @@
-#### [Docs](../../) / [Configuration](./) / index.js
+#### [Docs](../) / [Configuration](./) / index.ts
 
-# 3.1. `index.js`
+# 3.1. `index.ts`
 
 A manifest of the available configuration files. Configuration files added/created should be required in this file. This file should not be used to define any configuration values.
 

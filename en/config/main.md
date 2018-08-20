@@ -1,4 +1,4 @@
-#### [Docs](../../) / [Configuration](./) / main.js
+#### [Docs](../) / [Configuration](./) / main.ts
 
 # 3.2. `main.js`
 

@@ -1,4 +1,4 @@
-# 6.4 Scaling
+#### [Docs](../) / Scaling
 
 ## Docker Orchestration
 

@@ -1,4 +1,4 @@
-#### [Docs](../../) / [About fabrix](./) / Theory
+#### [Docs](../) / [About fabrix](./) / Theory
 
 # 10.2. Design Theory
 

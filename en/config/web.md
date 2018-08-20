@@ -1,11 +1,11 @@
-#### [Docs](../../) / [Configuration](./) / web.js
+#### [Docs](../) / [Configuration](./) / web.ts
 
-# 3.7. `web.js`
+# 3.7. `web.ts`
 
 Configure the web server. Set the listening port, load any plugins, and define advanced web server settings. Fabrix supports several web servers, so the particular configuration options available will be provided by the chosen web server Spool (e.g., express, hapi).
 
 ```js
-// config/web.js
+// config/web.ts
 
 export const web = {
   /**
@@ -56,7 +56,7 @@ export const web = {
    * @this refers to the Fabrix application object
    */
   onPluginsLoaded (err) {
-    this.packs.hapi.server.views({
+    this.spools.hapi.server.views({
       engines: {
         js: require('hapi-react-views')
       },

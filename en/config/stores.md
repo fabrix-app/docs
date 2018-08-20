@@ -1,11 +1,11 @@
-#### [Docs](../../) / [Configuration](./) / stores.js
+#### [Docs](../) / [Configuration](./) / stores.ts
 
-# 3.5. `stores.js`
+# 3.5. `stores.ts`
 
 Define data stores. Each [Model](../build/model.md) maps itself to a "store". A single Fabrix application can configure many data stores of similar or different types.
 
 ```js
-// config/stores.js
+// config/stores.ts
 
 export const stores = {
 

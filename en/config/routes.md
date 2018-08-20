@@ -1,6 +1,6 @@
-#### [Docs](../../) / [Configuration](./) / routes.js
+#### [Docs](../) / [Configuration](./) / routes.ts
 
-# 3.4. `routes.js`
+# 3.4. `routes.ts`
 
 Define how web requests are routed to controllers. The Route objects are modeled on the hapi.js [Route Specification](https://hapijs.com/tutorials/routing). Some plugins such as [spool-tapestries](https://github.com/fabrix-app/spool-tapestries) may auto-generate Route configuration based on other facets of the application.
 
