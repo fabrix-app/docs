@@ -1,7 +1,7 @@
 {
   "name": "@fabrix/fabrix-docs",
   "version": "1.1.0",
-  "description": "fabrix Documentation",
+  "description": "Fabrix Documentation",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

@@ -1,4 +1,4 @@
-# fabrix Documentation
+# Fabrix Documentation
 
 ## Available Languages
 
