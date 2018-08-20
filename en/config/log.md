@@ -1,4 +1,4 @@
-#### [Docs](../../) / [Configuration](./) / log.ts
+#### [Docs](../index.md) / [Configuration](./index.md) / log.ts
 
 # 3.3. `log.js`
 

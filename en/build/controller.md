@@ -1,4 +1,4 @@
-#### [Docs](../) / [Build](./) / Controller
+#### [Docs](../index.md) / [Build](./index.md) / Controller
 
 # 2.1 Controller
 

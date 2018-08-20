@@ -1,4 +1,4 @@
-#### [Docs](../) / [Configuration](./) / routes.ts
+#### [Docs](../index.md) / [Configuration](./index.md) / routes.ts
 
 # 3.4. `routes.ts`
 

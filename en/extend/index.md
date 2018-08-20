@@ -1,4 +1,4 @@
-#### [Docs](../) / Extend
+#### [Docs](../index.md) / Extend
 
 # 7. Extend
 

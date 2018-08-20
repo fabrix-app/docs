@@ -1,4 +1,4 @@
-#### [Docs](../) / [Build](./) / Policy
+#### [Docs](../index.md) / [Build](./index.md) / Policy
 
 # 2.3 Policy
 

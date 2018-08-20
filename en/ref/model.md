@@ -1,4 +1,4 @@
-#### [Docs](../) / [API Reference](./) / Model
+#### [Docs](../index.md) / [API Reference](./) / Model
 
 ##### *If you're looking for the walkthrough guide on Models, see: [2.4 Model](../build/model.md)*
 

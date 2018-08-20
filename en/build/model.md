@@ -1,4 +1,4 @@
-#### [Docs](../) / [Build](./) / Model
+#### [Docs](../index.md) / [Build](./index.md) / Model
 
 # 2.4 Model
 

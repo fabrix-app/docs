@@ -1,4 +1,4 @@
-#### [Docs](../) / About fabrix
+#### [Docs](../index.md) / About fabrix
 
 # 10. About fabrix
 

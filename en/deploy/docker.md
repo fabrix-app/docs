@@ -1,4 +1,4 @@
-#### [Docs](../) / Docker
+#### [Docs](../index.md) / Docker
 
 # 6.5 [Docker](https://www.docker.com/what-docker)
 

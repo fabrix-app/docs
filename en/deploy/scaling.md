@@ -1,4 +1,4 @@
-#### [Docs](../) / Scaling
+#### [Docs](../index.md) / Scaling
 
 ## Docker Orchestration
 

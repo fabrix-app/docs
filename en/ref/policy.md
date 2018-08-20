@@ -1,4 +1,4 @@
-#### [Docs](../) / [API Reference](./) / Policy
+#### [Docs](../index.md) / [API Reference](./index.md) / Policy
 
 ##### *If you're looking for the walkthrough guide on Policies, see: [2.3 Policy](../build/policy.md)*
 

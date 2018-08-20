@@ -1,4 +1,4 @@
-#### [Docs](../) / [About fabrix](./) / Contribute
+#### [Docs](../index.md) / [About fabrix](./index.md) / Contribute
 
 # 10.4. Contributor's Guide
 

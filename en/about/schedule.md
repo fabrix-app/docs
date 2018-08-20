@@ -1,4 +1,4 @@
-#### [Docs](../) / [About fabrix](./) / Release Schedule
+#### [Docs](../index.md) / [About fabrix](./index.md) / Release Schedule
 
 # 10.3. Release Schedule
 

@@ -1,4 +1,4 @@
-#### [Docs](../) / [Build](./) / Service
+#### [Docs](../index.md) / [Build](./index.md) / Service
 
 # 2.2 Service
 

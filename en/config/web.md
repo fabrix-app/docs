@@ -1,4 +1,4 @@
-#### [Docs](../) / [Configuration](./) / web.ts
+#### [Docs](../index.md) / [Configuration](./index.md) / web.ts
 
 # 3.7. `web.ts`
 

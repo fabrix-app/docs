@@ -1,4 +1,4 @@
-#### [Docs](../) / Configuration
+#### [Docs](../index.md) / Configuration
 
 # 3. Configuration
 

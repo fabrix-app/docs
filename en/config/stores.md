@@ -1,4 +1,4 @@
-#### [Docs](../) / [Configuration](./) / stores.ts
+#### [Docs](../index.md) / [Configuration](./index.md) / stores.ts
 
 # 3.5. `stores.ts`
 

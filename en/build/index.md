@@ -1,4 +1,4 @@
-#### [Docs](../) / Build
+#### [Docs](../index.md) / Build
 
 ##### *If you haven't yet created a Fabrix Application, [**Start**](../start.md) there first.*
 
