@@ -39,4 +39,4 @@ The i18n translator instance. Convenience reference for `this.app.__`.
 Convenience reference to `this.app.services`.
 
 
-## Next: [Service API](service.md)
+## Next: [Service API](./service.md)

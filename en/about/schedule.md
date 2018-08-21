@@ -2,7 +2,7 @@
 
 # 10.3. Release Schedule
 
-The Fabrix team maintains this document to serve as a foward-looking plan for how the framework will grow and evolve. The goal of the roadmap is to assist developers in planning the future of their projects. Please submit an Issue or Pull Request if you feel that something should be added or changed in this document, and we are happy to discuss.
+The Fabrix team maintains this document to serve as a forward-looking plan for how the framework will grow and evolve. The goal of the roadmap (or sewing pattern if you will) is to assist developers in planning the future of their projects. Please submit an Issue or Pull Request if you feel that something should be added or changed in this document, and we are happy to discuss.
 
 ## Organization
 
@@ -18,9 +18,9 @@ Major and minor version releases occur according to a regular calendar schedule,
 
 ## Upcoming Releases
 
-### v3.0 (April 2017)
+### v2.0 (April 2018)
 
-Fabrix v3 development takes place on the [v3 branch](https://github.com/fabrix-app/fabrix/tree/v3). Some key changes and additions:
-- Node 6 is required; ES5 code written for Node 4 will be refactored into ES6
-- Separate i18n and logging from the core
+Fabrix v2 development takes place on the [v2 branch](https://github.com/fabrix-app/fabrix/tree/v2). Some key changes and additions:
 - Utilize GraphQL as a common ORM language
+- Reactive Spools that can be loaded and unloaded at run time.
+- "Redux" style configuration mapping for immutability and config history.

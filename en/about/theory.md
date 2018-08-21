@@ -14,7 +14,7 @@ Fabrix defines the an interface called the Spool Lifecycle which inform how Spoo
 
 ### Lifecycle Stages
 
-Spools are loaded in three stages: Validate, Configure, and Initialize. All Spools must complete each stage before the next stage begins.
+Spools are loaded in three stages: Validate, Configure, and Initialize. All Spools must complete each stage before the next stage begins. A fourth stage: Sanity is run after the other spools are completely loaded, allowing for Spools to check that they were instantiated properly.
 
 ### Lifecycle Configuration
 

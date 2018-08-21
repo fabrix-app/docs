@@ -4,45 +4,45 @@
 
 Fabrix provides a unified way to configure all facets of your application. All configuration files are located in the `config/` directory.
 
-## 3.1. [`index.js`](manifest.md)
+## 3.1. [`index.ts`](manifest.md)
 
 A manifest of the available configuration files.
 
-## 3.2. [`main.js`](main.md)
+## 3.2. [`main.ts`](main.md)
 
 Declare the Spools to load, set filesystem paths, and other basic application settings.
 
-## 3.3. [`log.js`](log.md)
+## 3.3. [`log.ts`](log.md)
 
 Setup the logger that Fabrix will use during runtime.
 
-## 3.4. [`routes.js`](routes.md)
+## 3.4. [`routes.ts`](routes.md)
 
 Define how web requests are routed to controllers.
 
-## 3.5. [`stores.js`](stores.md)
+## 3.5. [`stores.ts`](stores.md)
 
 Define data stores. Each [Model](../build/model.md) maps itself to a "store".
 
-## 3.6. [`i18n.js`](i18n.md)
+## 3.6. [`i18n.ts`](i18n.md)
 
 Setup internationalization, define multi-language mappings, etc.
 
-## 3.7. [`web.js`](web.md)
+## 3.7. [`web.ts`](web.md)
 
 Configure the web server. Set the listening port, load any plugins, and define advanced web server settings.
 
 # Environment
 
-Fabrix can load environment-dependent configuration based on the `NODE_ENV` environment variable. By default, `NODE_ENV=development`. By creating separate configurations inside `config/env/`, different configurations are loaded based on the value of `NODE_ENV`. Note: Anytime you add a config file, remember to add it to the [`index.js`](index.md) manifest!
+Fabrix can load environment-dependent configuration based on the `NODE_ENV` environment variable. By default, `NODE_ENV=development`. By creating separate configurations inside `config/env/`, different configurations are loaded based on the value of `NODE_ENV`. Note: Anytime you add a config file, remember to add it to the [`index.ts`](index.md) manifest!
 
 ## Example
 
-When `NODE_ENV=production`, the following configuration in `config/env/production.js` will override the existing value of `config.web.hostname` set in `config/web.js`.
+When `NODE_ENV=production`, the following configuration in `config/env/production.ts` will override the existing value of `config.web.hostname` set in `config/web.ts`.
 
 ```js
-// config/env/production.js
-module.exports = {
+// config/env/production.ts
+export const production = {
   web: {
     hostname: 'fabrix.app'
   }
@@ -56,8 +56,8 @@ module.exports = {
 The application configuration is available at `this.config` inside all Controllers, Services, and Policies. The nested objects in the configuration files are flattened into a [`Map`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map).
 
 ```js
-// api/services/MapService.js
-module.export = class MapService extends Service {
+// api/services/MapService.ts
+export class MapService extends Service {
 
   /**
    * Renders a single map tile
@@ -75,8 +75,8 @@ module.export = class MapService extends Service {
 The configuration is frozen and *immutable* during runtime; specifically, the configuration is frozen after all Spools complete their `configure` stage.
 
 ```js
-// spool-mapnik/index.js
-module.exports = class MapnikSpool extends Spool {
+// spool-mapnik/index.ts
+export class MapnikSpool extends Spool {
 
   /**
    * Set the default number of renderThreads based on the number of CPU cores

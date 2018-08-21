@@ -42,4 +42,4 @@ Return the id of the Model. e.g. for a Model called `User`, the `id` will be `us
 
 A reference to this model's `Resolver`.
 
-## Next: [Resolver API](resolver.md)
+## Next: [Resolver API](./resolver.md)

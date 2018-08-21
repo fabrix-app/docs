@@ -16,7 +16,7 @@ Initialize the application with the provided Fabrix `app` instance.
 | `spool` | `Object` | the Spool definition | yes |
 | `spool.pkg` | `Object` | the `package.json` of the Spool | yes. throws `PackageNotDefinedError` |
 | `spool.config` | `Object` | any custom configuration that the Spool requires | no |
-| `spool.api` | `Object` | any additonal API resources to mix-in to the Fabrix `app` | no |
+| `spool.api` | `Object` | any additional API resources to mix-in to the Fabrix `app` | no |
 
 #### How to Subclass
 
@@ -90,7 +90,7 @@ export class BootstrapSpool extends Spool {
    * Bind the Fabrix app to the bootstrap function's context so that it can fire events.
    */
   configure () {
-    this.config.bootstrap = this.config.bootstrap.bind(this.app)
+    this.config.set('bootstrap', this.config.get('bootstrap').bind(this.app))
   }
 }
 ```
@@ -107,7 +107,7 @@ export class BootstrapSpool extends Spool {
    * Invoke the user-configured bootstrap function
    */
   initialize () {
-    return this.config.bootstrap()
+    return this.config.get('bootstrap')()
   }
 }
 ```
@@ -134,4 +134,4 @@ export class BootstrapSpool extends Spool {
 
 This method is invoked when Fabrix is shutting down, either due to an unrecoverable runtime error, or because the user has explicitly invoked `.stop()`. This method should instruct the spool to perform any necessary cleanup with the expectation that the app will stop or reload soon thereafter. If your spool runs a daemon or any other thing that may occupy the event loop, implementing this method is important for Fabrix to exit correctly.
 
-## Next: [Controller API](controller.md)
+## Next: [Controller API](./controller.md)

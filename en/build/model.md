@@ -71,7 +71,7 @@ export const stores = {
 
 ## Create a Model
 
-First, we'll use the Fabrix generator to create a new Model called `User`. Both a Model and a Resolver will be created. The Resolver will be reviewed in section
+First, we'll use the Fabrix generator to create a new Model called `User`. Both a Model and a Resolver will be created. The Resolver will be reviewed in [section 2.5](./resolver.md)
 
 #### `fab model User`
 
@@ -156,4 +156,4 @@ export class UserService extends Service {
 
 Simple enough: instantiate a `new this.models.User({ ... })`, and then save it. But, where does `.save()` come from? In the next section, we walk through how Resolvers handle the work of storing and retrieving data to/from the data store.
 
-### Next: [Resolver](resolver.md)
+### Next: [Resolver](./resolver.md)

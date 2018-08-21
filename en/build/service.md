@@ -15,6 +15,7 @@ Let's build a simple web service that returns the latest version of some popular
 
 ```js
 // api/controller/VersionController.ts
+import { FabrixController as Controller } from '@fabrix/fabrix/dist/common'
 
 export class VersionController extends Controller {
 
@@ -42,7 +43,7 @@ export class VersionController extends Controller {
 
 ```js
 // api/services/VersionService.ts
-
+import { FabrixService as Service } from '@fabrix/fabrix/dist/common'
 import * as request from 'request-promise'
 
 export class VersionService extends Service {
@@ -111,4 +112,4 @@ export const routes = {
   }
   ```
 
-### Next: [Policy](policy.md)
+### Next: [Policy](./policy.md)

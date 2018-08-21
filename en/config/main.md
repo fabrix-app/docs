@@ -6,16 +6,19 @@ Declare the Spools to load, set filesystem paths, and other basic application se
 
 ```js
 // config/main.ts
-
+import { RouterSpool } from '@fabrix/spool-router'
+import { HapiSpool } from '@fabrix/spool-hapi'
+import { MapnikSpool } from '@fabrix/spool-mapnik'
+import { resolve } from 'path'
 export const main = {
   spools: [
-    require('@fabrix/spool-router').RouterSpool,
-    require('@fabrix/spool-hapi').HapiSpool,
-    require('@fabrix/spool-mapnik').MapnikSpool
+    RouterSpool,
+    HapiSpool,
+    MapnikSpool
   ],
 
   paths: {
-    root: path.resolve(__dirname, '..'),
+    root: resolve(__dirname, '..'),
     // ... other paths
   }
 }

@@ -248,4 +248,4 @@ this.app._fabrix.name     // 'fabrix'
 this.app._fabrix.version  // e.g. 3.0.0
 ```
 
-## Next: [Spool API](spool.md)
+## Next: [Spool API](./spool.md)

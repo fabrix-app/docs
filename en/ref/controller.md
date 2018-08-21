@@ -1,6 +1,6 @@
 #### [Docs](../index.md) / [API Reference](./index.md) / Controller
 
-##### *If you're looking for the walkthrough guide on Controllers, see: [2.1 Controller](../build/controller.md)*
+##### *If you're looking for the walk through guide on Controllers, see: [2.1 Controller](../build/controller.md)*
 
 # 9.3 Controller API
 
@@ -38,4 +38,4 @@ The i18n translator instance. Convenience reference for `this.app.__`.
 
 Convenience reference to `this.app.services`.
 
-## Next: [Policy API](policy.md)
+## Next: [Policy API](./policy.md)

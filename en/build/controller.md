@@ -81,7 +81,7 @@ Handlers are aptly-named: they *handle* web requests. Their job is to parse inco
 
 ```js
 // api/controllers/FirstController.ts
-
+import { FabrixController as Controller } from '@fabrix/fabrix/dist/common'
 /**
  * @module FirstController
  * @description handles hello world requests.
@@ -229,4 +229,4 @@ Pretty cool!
 
 Coming soon.
 
-### Next: [Service](service.md)
+### Next: [Service](./service.md)

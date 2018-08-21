@@ -31,6 +31,8 @@ export const log = {
 }
 ```
 
+Another option here is to use [spool-winston](https://github.com/fabirx-app/spool-winston) and configure winston through `config/winston.ts`.
+
 ## Environment-Specific Logging
 
 When deploying to production, you will likely want to configure the logger to level `info` or higher. This can be done using [Environment Configuration](https://github.com/fabrix-app/doc/blob/master/en/config/README.md#environment).

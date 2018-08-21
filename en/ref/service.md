@@ -43,4 +43,4 @@ Convenience reference to `this.app.services`.
 
 Convenience reference to `this.app.models`.
 
-## Next: [Model API](model.md)
+## Next: [Model API](./model.md)

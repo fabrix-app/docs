@@ -68,15 +68,17 @@ You are welcome to author a new Spool at any time.  Spools must inherit from the
 
 It is recommended that you maintain your Spool in your own Github repository.  If you would like to submit your Spool to be listed in the [Fabrix Github Organization](https://github.com/fabrix-app), please submit an issue to the [Fabrix Issue queue](https://github.com/fabrix-app/spool/issues).
 
-###### Contributing to a generator
 
+###### Adopting a Spool
+If you love an existing spool, there's a chance that the current maintainer may be willing to give you permissions to manage it. Just ask them! 
+
+###### Contributing to a generator
 Fabrix generators are based upon a cli. Please follow the core best practices for contributing to generators.  If it is located in a different repo, please send feature requests, patches, and issues there.
 
-###### Contributing to core
-
+###### Contributing to Core
 Fabrix has several dependencies referenced in the `package.json` file that are not part of the project proper. Any proposed changes to those dependencies or _their_ dependencies should be sent to their respective projects (i.e. Waterline etc.) Please do not send your patch or feature request to this repository, we cannot accept or fulfill it.
 
-In case of doubt, open an issue in the [issue tracker](https://github.com/fabrix-app/fabrix/issues), ask your question in the [Gitter room](http://gitter.im/fabrix-app/fabrix).  Especially if you plan to work on something big. Nothing is more frustrating than seeing your hard work go to waste because your vision does not align with a project's roadmap.  At the end of the day, we just want to be able to merge your code.
+In case of doubt, open an issue in the [issue tracker](https://github.com/fabrix-app/fabrix/issues), ask your question in the [Gitter room](http://gitter.im/fabrix-app/Lobby).  Especially if you plan to work on something big. Nothing is more frustrating than seeing your hard work go to waste because your vision does not align with a project's roadmap.  At the end of the day, we just want to be able to merge your code.
 
 ###### Submitting Pull Requests
 

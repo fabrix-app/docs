@@ -7,7 +7,7 @@ This guide assumes that you have previously installed Node.js 4.0.0 (or higher) 
 
 ## What is Fabrix?
 
-Fabrix is a new Node.js MVC framework written in TypeScript and transpiled to ES2015 (ES6). It's a modular framework which allows you to choose your every day framework(s) and make them work together.
+Fabrix is a new Node.js framework written in TypeScript and transpiled to ES2015 (ES6). It's a modular framework which allows you to choose your every day framework(s) and make them work together.
 
 ## Installation
 
@@ -66,7 +66,7 @@ And if your open http://localhost:3000 you should see :
 
 To stop server you need to `Ctrl+c` twice.
 
-## How to use Yeoman Generators
+## How to use the CLI (Command Line Interface)
 
 Fabrix uses the cli to generate scaffolding for new
 applications, and to create resources inside the application.
@@ -98,7 +98,7 @@ Now your server is running, let see how :)
 ![.Project structure](/assets/img/tutoYofabrix5.png)
 
 ### API
-As said earlier, Fabrix is a MVC framework. MVC stands for Model-View-Controller. This is a software design pattern is used to separate an application's concerns:
+As said earlier, Fabrix is a framework but it can also be an MVC framework. MVC stands for Model-View-Controller. This is a software design pattern is used to separate an application's concerns:
 
 - Model : The Model represents an object or Javascript POJO (Plain Old JavaScript Object) carrying data. It can also have logic to update controller if its data changes.
 - View : The View represents the visualization of the data that model contains.
@@ -114,7 +114,6 @@ Let's see how the default file structure looks.
 Model files depends on your ORM. By default Fabrix uses Waterline, so model definition will look like (http://waterline.js.org/docs/models/models.html) :
 
 ```js
-const Model = require('fabrix-model')
 import { FabrixModel as Model } from '@fabrix/fabrix/dist/common'
 /**
  * User

@@ -18,6 +18,7 @@ Similar to Controllers and Services, we'll create a new Policy using the Fabrix 
 // api/policies/TimePolicy.ts
 
 import * as moment from 'moment'
+import { FabrixPolicy as Policy } from '@fabrix/fabrix/dist/common'
 
 export class TimePolicy extends Policy {
   
@@ -46,7 +47,7 @@ export class TimePolicy extends Policy {
 
 ### Configure Policy
 
-Let's say we want this Policy to apply to `VersionController.getLatest` that we built in the [previous section](service.md). We configure this Policy as a *precondition* of the `VersionController.getLatest` route:
+Let's say we want this Policy to apply to `VersionController.getLatest` that we built in the [previous section](./service.md). We configure this Policy as a *precondition* of the `VersionController.getLatest` route:
 
 ```js
 // config/routes.ts
@@ -105,4 +106,4 @@ Now, requests to `/version/{packageName}` will first be validated by `TimePolicy
   }
   ```
 
-### Next: [Model](model.md)
+### Next: [Model](./model.md)

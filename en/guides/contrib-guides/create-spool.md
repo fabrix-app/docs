@@ -232,7 +232,7 @@ npm link mySpool;
 
 All you need to do now, in order to run it, is to edit `config/main.ts` your Fabrix project and add your spool in `spools` :
 
-```
+```js
 /**
  * Spool Configuration
  * (app.config.main)
