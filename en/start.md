@@ -112,4 +112,4 @@ A bunch of new files will be created, and you'll be able to fire up your new Fab
 └───────────────────────────────────────────┘
 ```
 
-## Next: [Build your App](./build)
+## Next: [Build your App](./build/index.md)
