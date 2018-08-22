@@ -8,7 +8,7 @@ Maintaining a open source project is a labor of love, meaning the core maintaine
 
 ## Submitting Issues
 
-> Fabrix is composed of a core library, [fabrix](https://github.com/fabrix-app/fabrix), and a number of [Spools](https://github.com/fabrix-app), which have their own dedicated repositories.  These repositories may also live outside the Fabrix official Github organization.  
+> Fabrix is composed of a core library, [Fabrix](https://github.com/fabrix-app/fabrix), and a number of [Spools](https://github.com/fabrix-app), which have their own dedicated repositories.  These repositories may also live outside the Fabrix official Github organization.  
 > 
 > _*Please open issues with spools, generators, etc. in the relevant repository.*_  
 > 
@@ -54,33 +54,33 @@ The community is what makes Fabrix great, without you we wouldn't have come so f
 
 > Note: This section is based on the [Node.js contribution guide](https://github.com/joyent/node/blob/master/CONTRIBUTING.md#contributing).
 
-###### No CoffeeScript.
+##### No CoffeeScript.
 
-For consistency, all code in Fabrix core, including core hooks and core generators, must be written in JavaScript, not CoffeeScript or TypeScript.  We can't merge a pull request in CoffeeScript.
+For consistency, all code in Fabrix core, including core hooks and core generators, must be written in TypeScript, not CoffeeScript.  We can't merge a pull request in CoffeeScript.
 
-###### Contributing to an Spool 
+##### Contributing to an Spool 
 
 If the Spool is in the Fabrix Github organization, please send feature requests, patches and pull requests to that organization.  Other Spools may have their own contribution guidelines.  Please follow the guidelines of the Spool you are contributing to.
 
-###### Authoring a new Spool
+##### Authoring a new Spool
 
-You are welcome to author a new Spool at any time.  Spools must inherit from the main [Spool](https://github.com/fabrix-app/spool) interface to inherit the API.  Feel free to start work on a new spool, just make sure and do a thorough search on npm, Google and Github to make sure someone else hasn't already started working on the same thing.  
+You are welcome to author a new Spool at any time.  Spools must inherit from the main [Spool](https://github.com/fabrix-app/fabrix/common/spool) interface to inherit the API.  Feel free to start work on a new spool, just make sure and do a thorough search on npm, Google and Github to make sure someone else hasn't already started working on the same thing.  
 
 It is recommended that you maintain your Spool in your own Github repository.  If you would like to submit your Spool to be listed in the [Fabrix Github Organization](https://github.com/fabrix-app), please submit an issue to the [Fabrix Issue queue](https://github.com/fabrix-app/spool/issues).
 
 
-###### Adopting a Spool
+##### Adopting a Spool
 If you love an existing spool, there's a chance that the current maintainer may be willing to give you permissions to manage it. Just ask them! 
 
-###### Contributing to a generator
+##### Contributing to a generator
 Fabrix generators are based upon a cli. Please follow the core best practices for contributing to generators.  If it is located in a different repo, please send feature requests, patches, and issues there.
 
-###### Contributing to Core
+##### Contributing to Core
 Fabrix has several dependencies referenced in the `package.json` file that are not part of the project proper. Any proposed changes to those dependencies or _their_ dependencies should be sent to their respective projects (i.e. Waterline etc.) Please do not send your patch or feature request to this repository, we cannot accept or fulfill it.
 
 In case of doubt, open an issue in the [issue tracker](https://github.com/fabrix-app/fabrix/issues), ask your question in the [Gitter room](http://gitter.im/fabrix-app/Lobby).  Especially if you plan to work on something big. Nothing is more frustrating than seeing your hard work go to waste because your vision does not align with a project's roadmap.  At the end of the day, we just want to be able to merge your code.
 
-###### Submitting Pull Requests
+##### Submitting Pull Requests
 
 0. If you don't know how to fork and PR, [Github has some great documentation](https://help.github.com/articles/using-pull-requests/).  Here's the quick version:
 1. Fork the repo.
@@ -103,4 +103,4 @@ $ npm version patch
 $ git push upstream --tags
 ```
 
-3. Circle-CI will publish the release to npm.
+3. Circle-CI will publish the release to npm when tests pass.
